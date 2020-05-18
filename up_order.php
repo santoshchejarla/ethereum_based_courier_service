@@ -14,4 +14,5 @@ if($_SESSION['role']=='a' or $_SESSION['role']=='i'){
         }
         else header("Location: employee.php");
     }
+    else die("Unable to process request!");
 }

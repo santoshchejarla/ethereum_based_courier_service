@@ -39,7 +39,7 @@ session_start();
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
                         <div class="logo">
-                            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                            <!-- <a href="index.html"><img src="img/logo.png" alt="logo"></a> -->
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-6 col-md-offset-1 col-sm-7 col-lg-offset-1 col-lg-6 mobMenuCol">
@@ -113,7 +113,7 @@ session_start();
                 //error_reporting(0);
                 
                 if ($_SESSION['role']=='i'){
-                    // mysqli_connect("localhost","root","");
+                    // mysqli_connect("localhost","root","JyothirmayeE@77");
                     // mysqli_select_db("courier");
                     $conn = new mysqli("localhost","root","JyothirmayeE@77","courier");
                     $result=mysqli_query($conn,"select * from orders order by order_id");

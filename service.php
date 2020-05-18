@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
                         <div class="logo">
-                            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                            <!-- <a href="index.html"><img src="img/logo.png" alt="logo"></a> -->
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-6 col-md-offset-1 col-sm-7 col-lg-offset-1 col-lg-6 mobMenuCol">
@@ -102,7 +102,7 @@
     </section>
     <!-- /.End Of Pricing Area -->
 
-    <div class="copyright-area">
+    <!-- <div class="copyright-area">
         <div class="container">
             <div class="col-xs-12 col-sm-6 col-md-6 text-left">
                 <div class="footer-text">
@@ -115,11 +115,11 @@
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-linkedin"></a>
                     <a href="#" class="fa fa-google-plus"></a>
-                    <a href="#" class="fa fa-dribbble"></a> -->
+                    <a href="#" class="fa fa-dribbble"></a> 
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 

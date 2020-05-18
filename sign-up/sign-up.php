@@ -10,9 +10,8 @@ $password=$_POST["password"];
 $phone=$_POST["phone"];
 $address=$_POST["address"];
 $eaddress=$_POST["eaddress"];
-$pvtkey=$_POST["pvtkey"];
 //---------------------------
-$query="INSERT INTO user VALUES('$email', '$password', 'c','$fname','$pvtkey','$eaddress')";
+$query="INSERT INTO user VALUES('$email', '$password', 'c','$fname','$eaddress')";
 $result = mysqli_query($conn,$query);
 echo $query;
 $query = "INSERT INTO customer VALUES('$email','$fname','$lname','$phone','$address')";

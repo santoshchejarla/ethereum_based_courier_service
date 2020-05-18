@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  background-image: url("../img/login.jpg");
   padding: 1em;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
@@ -148,6 +149,7 @@ select option {
   line-height: 3.4em;
   text-align: center;
   pointer-events: none;
+  font-weight: 900;
 }
 .input-group-icon .input-icon:after {
   position: absolute;

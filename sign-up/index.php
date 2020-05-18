@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Sign Up Form</title>
 <link rel='stylesheet' href='font-awesome.min.css'>
+<link media="all" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -39,10 +40,6 @@
       </div>
       <div class="input-group input-group-icon">
         <input name='eaddress' type="text" placeholder="eaddress"/>
-        <div class="input-icon"><i class="fa fa-key"></i></div>
-      </div>
-      <div class="input-group input-group-icon">
-        <input name='pvtkey' type="password" placeholder="pvtkey"/>
         <div class="input-icon"><i class="fa fa-key"></i></div>
       </div>
     </div>

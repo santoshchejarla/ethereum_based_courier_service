@@ -10,7 +10,7 @@ echo $_SESSION['item_2_id'];
 echo $_SESSION['item_3_id'];
 echo $_SESSION['desc'];
 //include "config.php";
-$conn= new mysqli("localhost","root","","courier");
+$conn= new mysqli("localhost","root","JyothirmayeE@77","courier");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

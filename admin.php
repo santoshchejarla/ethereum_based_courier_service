@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +40,7 @@ session_start();
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
                         <div class="logo">
-                            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                            <!-- <a href="index.html"><img src="img/logo.png" alt="logo"></a> -->
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-6 col-md-offset-1 col-sm-7 col-lg-offset-1 col-lg-6 mobMenuCol">
@@ -104,7 +105,8 @@ session_start();
                 #error_reporting(-1);
 
                 if ($_SESSION['role']=='a'){
-                    $conn=new mysqli("localhost","root","","courier");
+                    $conn=new mysqli("localhost","root","JyothirmayeE@77","courier");
+                    #mysql_connect("localhost","root","JyothirmayeE@77");
                     #mysql_select_db("courier");
                     $result=mysqli_query($conn,"select * from status");
                     echo "<h3>Orders</h3>";
@@ -201,8 +203,6 @@ session_start();
                       <input name="name" type="text" placeholder="Full name"/>
                       <p>Ether address :</p>
                       <input name="address" type="text" placeholder="Ether Address"/>
-                      <p>Pvtkey :</p>
-                      <input name="pvtkey" type="password" placeholder="Pvtkey"/>
                       <p>Area :</p>
                         <input name="area" type="integer" placeholder="Area"/>
                       <p>Salary :</p>

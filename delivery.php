@@ -38,9 +38,9 @@ session_start();
             <div class="container">
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
-                        <div class="logo">
-                            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-                        </div>
+                        <!-- <div class="logo">
+                            <!-- <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                        </div> -->
                     </div>
                     <div class="col-md-6 col-xs-6 col-md-offset-1 col-sm-7 col-lg-offset-1 col-lg-6 mobMenuCol">
                         <nav class="navbar">
@@ -72,7 +72,7 @@ session_start();
                     <div class="pricing-desc section-padding-two">
                         <div class="pricing-desc-title">
                             <div class="title">
-                                <h2>Employee Panel</h2>
+                                <h2>Delivery Panel</h2>
                             </div>
                             
                         </div>
@@ -112,8 +112,8 @@ session_start();
                 <?php
                 #error_reporting(0);
                 if ($_SESSION['role']=='d'){
-                    $conn = new mysqli("localhost","root","","courier");
-                    $result=mysqli_query($conn,"select * from status where delivery_boy='$_SESSION[email]'");
+                    $conn = new mysqli("localhost","root","JyothirmayeE@77","courier");
+                    $result=mysqli_query($conn,"select * from status where email='$_SESSION[email]'");
                     echo "<h3><b>Orders</b></h3><hr>";
                     echo '<table callpadding="10" border="1">
                     <tr>

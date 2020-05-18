@@ -20,7 +20,7 @@ $_SESSION['desc']=$_POST['desc'];
 // echo $_SESSION['desc'];
 //echo $_SESSION['role'];
 //include "config.php";
-$conn= new mysqli("localhost","root","","courier");
+$conn= new mysqli("localhost","root","JyothirmayeE@77","courier");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

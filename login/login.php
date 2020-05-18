@@ -5,7 +5,7 @@ include 'config.php';
 $email=$_POST["email"];
 $password=$_POST["password"];
 //---------------------------
-echo $email,$password;
+echo $email;
 $query="select email from user where email='$email'";
 $result = mysqli_fetch_array(mysqli_query($conn,$query));
 if ($result['email']!=''){
@@ -30,10 +30,10 @@ if ($result['password']==$password){
         }
 }
 else{
-    echo "Unable to login";
+    echo " Unable to login <a href='./'>click here to login again</a>";
 }
 }
 else{
-    echo "User not found";
+    echo " User not found <a href='../sign-up/'> click here to register</a>";
 }
 ?>
