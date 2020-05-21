@@ -5,14 +5,14 @@ include 'config.php';
 $email=$_POST["email"];
 $password=$_POST["password"];
 //---------------------------
-echo $email;
+// echo $email;
 $query="select email from user where email='$email'";
 $result = mysqli_fetch_array(mysqli_query($conn,$query));
 if ($result['email']!=''){
 $query="select password from user where email='$email'";
 $result = mysqli_fetch_array(mysqli_query($conn,$query));
 if ($result['password']==$password){
-    echo "Login successful!";
+    echo "Login successful! Redirecting to your panel";
    $query="select role,email from user where email='$email' and password='$password'";
    $result=mysqli_fetch_array(mysqli_query($conn,$query));
    session_start();

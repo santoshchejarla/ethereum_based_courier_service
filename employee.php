@@ -1,5 +1,8 @@
 <?php
 session_start();
+error_reporting(0);
+if ($_SESSION['role']!='i'){die('Please login! <a href="login/"> here </a>');}
+include 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +50,6 @@ session_start();
                                 <ul class="nav navbar-nav navbar-right menu">
                                     <li><a href="index.html">home</a>
                                     </li>
-                                    <li><a href="pricing.html">pricing</a></li>
                                 </ul>
                             <!-- /.navbar-collapse -->
                         </nav>
@@ -110,12 +112,7 @@ session_start();
                     } 
                 </style>
                 <?php
-                //error_reporting(0);
                 
-                if ($_SESSION['role']=='i'){
-                    // mysqli_connect("localhost","root","JyothirmayeE@77");
-                    // mysqli_select_db("courier");
-                    $conn = new mysqli("localhost","root","JyothirmayeE@77","courier");
                     $result=mysqli_query($conn,"select * from orders order by order_id");
                     $result2=mysqli_query($conn,"select * from status order by order_id");
                     echo "<h3><b>Orders</b></h3><hr>";
@@ -147,13 +144,12 @@ session_start();
                         echo "</tr>";
                     }
                     echo "</table></br>";
-                }
-                else echo "You are not signed-in! please sign-in.";
+                
             
                 ?>
                 <br><h3><b>Add A New Order</b></h3><hr>
             <form action="payment/index.php" method="post">
-            <p>Email : </p><input name="email" type="text" placeholder="email"/><br><br>
+            <p>Email : </p><input name="email" type="email" placeholder="email"/><br><br>
             <p>Delivery address : </p>
                 <input type="text" name="to_address" placeholder="delivery address"><br><br>
             <p>Location ID</p>
@@ -172,8 +168,6 @@ session_start();
             <p>Delicate Delivery :
             <input type="radio" name="delicate" value="0" checked> No 
                 <input type="radio" name="delicate" value="1"> Yes </p>
-                <!-- <p>64-bit Private Key</p>
-            <input type="password" name="pvtkey" placeholder="pvtkey"><br><br> -->
             <input type="submit">
             </form><br>
             <h3><b>Update Orders</b></h3><hr>
@@ -198,11 +192,6 @@ session_start();
             </div>
             <div class="col-xs-12  col-sm-6 col-md-6 text-right">
                 <div class="footer-text">
-                    <!-- <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                    <a href="#" class="fa fa-google-plus"></a>
-                    <a href="#" class="fa fa-dribbble"></a> -->
                 </div>
             </div>
         </div>

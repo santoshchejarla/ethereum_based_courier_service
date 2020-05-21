@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0); 
+include 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +49,6 @@ error_reporting(0);
                                 <ul class="nav navbar-nav navbar-right menu">
                                     <li><a href="index.html">home</a>
                                     </li>
-                                    <li><a href="pricing.html">pricing</a></li>
                                 </ul>
                             <!-- /.navbar-collapse -->
                         </nav>
@@ -105,9 +105,6 @@ error_reporting(0);
                 #error_reporting(-1);
 
                 if ($_SESSION['role']=='a'){
-                    $conn=new mysqli("localhost","root","JyothirmayeE@77","courier");
-                    #mysql_connect("localhost","root","JyothirmayeE@77");
-                    #mysql_select_db("courier");
                     $result=mysqli_query($conn,"select * from status");
                     echo "<h3>Orders</h3>";
                     echo '<table callpadding="10" border="1">

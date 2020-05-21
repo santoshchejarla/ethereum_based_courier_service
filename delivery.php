@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +48,6 @@ session_start();
                                 <ul class="nav navbar-nav navbar-right menu">
                                     <li><a href="index.html">home</a>
                                     </li>
-                                    <li><a href="pricing.html">pricing</a></li>
                                 </ul>
                             <!-- /.navbar-collapse -->
                         </nav>
@@ -112,7 +112,6 @@ session_start();
                 <?php
                 #error_reporting(0);
                 if ($_SESSION['role']=='d'){
-                    $conn = new mysqli("localhost","root","JyothirmayeE@77","courier");
                     $result=mysqli_query($conn,"select * from status where email='$_SESSION[email]'");
                     echo "<h3><b>Orders</b></h3><hr>";
                     echo '<table callpadding="10" border="1">

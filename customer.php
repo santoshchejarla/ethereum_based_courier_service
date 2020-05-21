@@ -44,7 +44,6 @@
                                 <ul class="nav navbar-nav navbar-right menu">
                                     <li><a href="index.html">home</a>
                                     </li>
-                                    <li><a href="pricing.html">pricing</a></li>
                                 </ul>
                             <!-- /.navbar-collapse -->
                         </nav>

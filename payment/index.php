@@ -9,17 +9,6 @@ $_SESSION['item_1_id']=$_POST['item_1_id'];
 $_SESSION['item_2_id']=$_POST['item_2_id'];
 $_SESSION['item_3_id']=$_POST['item_3_id'];
 $_SESSION['desc']=$_POST['desc'];
-// echo $_SESSION['email'];
-// echo $_SESSION['location_id'];
-// echo $_SESSION['fast'];
-// echo $_SESSION['delicate'];
-// echo $_SESSION['to_address'];
-// echo $_SESSION['item_1_id'];
-// echo $_SESSION['item_2_id'];
-// echo $_SESSION['item_3_id'];
-// echo $_SESSION['desc'];
-//echo $_SESSION['role'];
-//include "config.php";
 $conn= new mysqli("localhost","root","JyothirmayeE@77","courier");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -29,9 +18,7 @@ if($valid[0]!=''){
         if($_POST['fast']==1) $exp=date('d')+1;
         else $exp=date('d')+2;
         $date= date("Y")."-".date("m")."-".$exp;
-        
-        #cost_calc
-        //echo $_POST['item_2_id'];
+
         $query="select cost from cost where location_id='$_POST[location_id]'";
         $cost=mysqli_fetch_array(mysqli_query($conn,$query));
         if($_POST['fast']==1){

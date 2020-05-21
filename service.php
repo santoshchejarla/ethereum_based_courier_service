@@ -45,7 +45,6 @@
                                     <li><a href="index.html">home</a>
                                     </li>
                                     <li class="current-menu-item"><a href="service.php">services</a></li>
-                                    <li><a href="pricing.html">pricing</a></li>
                                 </ul>
                             <!-- /.navbar-collapse -->
                         </nav>
@@ -72,6 +71,7 @@
                             <div class="title">
                                 <h2>Order Status</h2>
                                 <?php
+                                error_reporting(0);
                                 include 'sign-up/config.php';
                                 $id=$_GET['id'];
                                 $query="select * from orders inner join status on orders.order_id=status.order_id where orders.order_id=$id";

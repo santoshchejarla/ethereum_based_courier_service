@@ -1,5 +1,7 @@
 <?php
+error_reporting(0);
 session_start();
+if ($_SESSION['role']!='a') {die('Please login! <a href="login/"> here </a>');}
 include 'config.php';
 //---------------------------
 $employee=$_POST["employee"];
@@ -10,9 +12,8 @@ $salary=$_POST["salary"];
 $area=$_POST["area"];
 $address=$_POST["address"];
 $pvtkey=$_POST["pvtkey"];
-// if($_SESSION['role']=='a'){
 //---------------------------
-$query="INSERT INTO user VALUES( '$email', '$password', '$employee','$name','$pvtkey','$address')";
+$query="INSERT INTO user VALUES( '$email', '$password', '$employee','$name','$address')";
 $result1 = mysqli_query($conn,$query);
 if ($employee=='i'){
     $query="INSERT INTO incharge VALUES( '$email', '$salary', '$area')";
@@ -30,5 +31,4 @@ if ($result1==1 && $result2==1){
 else{
     echo "Unable to process the request!";
 }
-// }
 ?>
