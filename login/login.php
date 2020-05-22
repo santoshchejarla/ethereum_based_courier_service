@@ -3,7 +3,9 @@
 include 'config.php';
 //---------------------------
 $email=$_POST["email"];
+$email=addslashes($email);
 $password=$_POST["password"];
+$password=addslashes($password);
 //---------------------------
 // echo $email;
 $query="select email from user where email='$email'";

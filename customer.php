@@ -134,6 +134,7 @@
                     echo "</table></br>";
                 }
                 else echo "You are not signed-in! please sign-in.";
+                session_destroy();
                 ?>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

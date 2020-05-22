@@ -74,6 +74,7 @@
                                 error_reporting(0);
                                 include 'sign-up/config.php';
                                 $id=$_GET['id'];
+                                $id=addslashes($id);
                                 $query="select * from orders inner join status on orders.order_id=status.order_id where orders.order_id=$id";
                                 $result=mysqli_fetch_array(mysqli_query($conn,$query));
                                 if($result[0]!=''){

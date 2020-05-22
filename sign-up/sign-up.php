@@ -3,13 +3,13 @@ include 'config.php';
 // error_reporting(-1);
 // ini_set('display_errors', 'On');
 //---------------------------
-$fname=$_POST["fname"];
-$lname=$_POST["lname"];
-$email=$_POST["email"];
-$password=$_POST["password"];
-$phone=$_POST["phone"];
-$address=$_POST["address"];
-$eaddress=$_POST["eaddress"];
+$fname=addslashes($_POST["fname"]);
+$lname=addslashes($_POST["lname"]);
+$email=addslashes($_POST["email"]);
+$password=addslashes($_POST["password"]);
+$phone=addslashes($_POST["phone"]);
+$address=addslashes($_POST["address"]);
+$eaddress=addslashes($_POST["eaddress"]);
 //---------------------------
 $query="INSERT INTO user VALUES('$email', '$password', 'c','$fname','$eaddress')";
 $result = mysqli_query($conn,$query);
