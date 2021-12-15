@@ -9,7 +9,7 @@ $_SESSION['item_1_id']=$_POST['item_1_id'];
 $_SESSION['item_2_id']=$_POST['item_2_id'];
 $_SESSION['item_3_id']=$_POST['item_3_id'];
 $_SESSION['desc']=$_POST['desc'];
-$conn= new mysqli("localhost","root","JyothirmayeE@77","courier");
+$conn= new mysqli("localhost","root","","courier");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
